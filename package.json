@@ -1,18 +1,28 @@
 {
   "name": "biconpicker",
   "version": "1.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "Iconpicker for Bootstrap 5 icons",
+  "main": "dist/biconpicker.js",
+  "module": "src/biconpicker.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "start": "webpack --config webpack.config.js --mode=production"
   },
-  "keywords": [],
+  "keywords": [
+    "bootstrap",
+    "css",
+    "js",
+    "bootstrap-icons",
+    "iconpicker"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "node-sass": "^5.0.0",
     "sass-loader": "^10.1.1",
