@@ -2,25 +2,35 @@
 
 ### Usage
 
-**1** - Just download the git repo and get file under dist directory and import it:
+**1** - Via **cdn** (latest)
 
-```
-<script src="/path/to/biconpicker.js"></script>
+```js
+<script src="http://cdn.codethereal.com/biconpicker/dist/biconpicker.js"></script>
 ```
 
-**2** - Install via **npm**
+**2** - Via **npm**
 
 ```
 npm i biconpicker
+```
 
+```js
 import Biconpicker from 'biconpicker'
 ```
+
+**3** - Or just download the git repo and get file under dist directory and import it
+
+```js
+<script src="/path/to/biconpicker.js"></script>
+```
+
 
 ```js
 new Biconpicker(document.querySelector(".biconpicker"));
 new Biconpicker(document.querySelector(".biconpicker"), options);
 document.querySelectorAll('.biconpicker').forEach(picker => new Biconpicker(picker))
 ```
+
 
 **Options**
 ```js
@@ -34,4 +44,4 @@ new Biconpicker(document.querySelector(".biconpicker"), {
 });
 ```
 
-**You can check the example folder for demonstration**
+![biconpicker](http://cdn.codethereal.com/biconpicker/demo.png)
