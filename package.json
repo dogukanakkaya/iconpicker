@@ -1,6 +1,6 @@
 {
   "name": "biconpicker",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Iconpicker for Bootstrap 5 icons",
   "main": "dist/biconpicker.js",
   "module": "src/biconpicker.js",
