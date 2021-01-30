@@ -1,0 +1,43 @@
+.biconpicker-dropdown {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background: #fff;
+    overflow: scroll;
+    box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    z-index: 999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    left: 0;
+    top: 38px;
+    list-style: none;
+
+    li {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid #b2b2b273;
+      cursor: pointer;
+      margin-bottom: 0.25rem;
+
+      &.selected {
+        background-color: #007eff;
+        color: #fff;
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+}
