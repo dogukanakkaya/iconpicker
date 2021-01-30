@@ -41,6 +41,7 @@ new Biconpicker(document.querySelector(".biconpicker"), {
   searchable: true, // default: true (use the input as a search box)
   selectedClass: "selected", // default: true (selected icon class)
   containerClass: "my-picker", // default: (container class of biconpicker)
+  hideOnSelect: true // default true (hides the dropdown on select)
 });
 ```
 

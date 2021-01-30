@@ -1,3 +1,16 @@
+$dropdown-width: 250px;
+$dropdown-height: 200px;
+$dropdown-padding: 1rem;
+$dropdown-box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
+
+$item-width: 40px;
+$item-height: 40px;
+$item-border: 1px solid #b2b2b273;
+$item-margin-bottom: 0.25rem;
+
+$selected-background-color: #007eff;
+$selected-color: #fff;
+
 .biconpicker-dropdown {
   display: none;
 
@@ -7,32 +20,31 @@
 
   ul {
     position: absolute;
-    width: 250px;
-    height: 200px;
+    width: $dropdown-width;
+    height: $dropdown-height;
     background: #fff;
     overflow: scroll;
-    box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    box-shadow: $dropdown-box-shadow;
+    padding: $dropdown-padding;
     z-index: 999;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     left: 0;
-    top: 38px;
     list-style: none;
 
     li {
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
+      width: $item-width;
+      height: $item-height;
+      line-height: $item-height;
       text-align: center;
-      border: 1px solid #b2b2b273;
+      border: $item-border;
       cursor: pointer;
-      margin-bottom: 0.25rem;
+      margin-bottom: $item-margin-bottom;
 
       &.selected {
-        background-color: #007eff;
-        color: #fff;
+        background-color: $selected-background-color;
+        color: $selected-color;
       }
 
       &.hidden {

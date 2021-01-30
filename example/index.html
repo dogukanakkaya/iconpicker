@@ -22,13 +22,13 @@
     <script>
         const Biconpicker = window.Biconpicker
         new Biconpicker(document.querySelector('.biconpicker'), {
-            inputReadOnly: true, // default: true
             prefix: 'bi-', // default: bi-
             //icons: [],
             showSelectedIn: document.querySelector('.selected-bicon'), // default: none
             searchable: true, // default: true
             selectedClass: 'selected', // default: true
             containerClass: 'my-picker', // default:
+            hideOnSelect: true
         })
     </script>
 </body>
