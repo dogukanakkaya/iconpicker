@@ -1,9 +1,9 @@
 {
-  "name": "biconpicker",
+  "name": "codethereal-iconpicker",
   "version": "1.0.3",
-  "description": "Iconpicker for Bootstrap 5 icons",
-  "main": "dist/biconpicker.js",
-  "module": "src/biconpicker.js",
+  "description": "Iconpicker for Bootstrap 5 icons or use with whatever icon family you want",
+  "main": "dist/iconpicker.js",
+  "module": "src/iconpicker.js",
   "directories": {
     "example": "example"
   },
@@ -11,10 +11,11 @@
     "start": "webpack --config webpack.config.js --mode=production"
   },
   "keywords": [
-    "bootstrap",
+    "icons",
     "css",
     "js",
     "bootstrap-icons",
+    "fontawesome",
     "iconpicker"
   ],
   "author": "",

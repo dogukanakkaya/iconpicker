@@ -11,11 +11,13 @@ $item-margin-bottom: 0.25rem;
 $selected-background-color: #007eff;
 $selected-color: #fff;
 
-.biconpicker-dropdown {
-  display: none;
+.iconpicker-dropdown {
+  visibility: hidden;
+  opacity: 0;
 
   &.show {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   ul {
