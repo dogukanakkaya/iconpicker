@@ -47,7 +47,7 @@ export default class Iconpicker
         this.el.addEventListener('focusin', this.focusIn.bind(this))
         this.el.addEventListener('change', this.setIconOnChange.bind(this))
 
-        this.el.value = defaultValue
+        this.el.value = valueFormat(defaultValue)
         this.el.dispatchEvent(new Event('change'))
     }
 
