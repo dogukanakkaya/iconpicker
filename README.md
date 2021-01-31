@@ -11,11 +11,11 @@
 **2** - Via **npm**
 
 ```
-npm i biconpicker
+npm i codethereal-iconpicker
 ```
 
 ```js
-import Iconpicker from 'iconpicker'
+import Iconpicker from 'codethereal-iconpicker'
 ```
 
 **3** - Or just download the git repo and get file under dist directory and import it
