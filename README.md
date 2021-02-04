@@ -1,4 +1,4 @@
-# Iconpicker for Bootstrap 5 (Also you can use it with fontawesome of any other using valueFormat option)
+# Iconpicker for Bootstrap 5
 
 ### Usage
 
@@ -34,17 +34,20 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
 
 **Options**
 ```js
-new Iconpicker(document.querySelector(".iconpicker"), {
-  //icons: [], // default: all of the icons (icon set if you want to use only some of them)
-  showSelectedIn: document.querySelector(".selected-icon"), // default: none (element to show selected icon)
-  searchable: true, // default: true (use the input as a search box)
-  selectedClass: "selected", // default: true (selected icon class)
-  containerClass: "my-picker", // default: (container class of biconpicker)
-  hideOnSelect: true, // default true (hides the dropdown on select)
-  fade: true, // default: false (fade animation)
-  defaultValue: 'bi-alarm', // default: (default value)
-  valueFormat: val => `bi ${val}` // default: bi ${val} (format the value instead of prefix in previous versions)
+const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
+    //icons: [], // default: all of the icons (icon set if you want to use only some of them)
+    showSelectedIn: document.querySelector(".selected-icon"), // default: none (element to show selected icon)
+    searchable: true, // default: true (use the input as a search box)
+    selectedClass: "selected", // default: selected (selected icon class)
+    containerClass: "my-picker", // default: (container class of iconpicker)
+    hideOnSelect: true, // default: true (hides the dropdown on select)
+    fade: true, // default: false (fade animation)
+    defaultValue: 'bi-alarm', // default: (default value)
+    valueFormat: val => `bi ${val}` // default: bi ${val} (format the value instead of prefix in previous versions)
 });
+
+iconpicker.reset() // Set as empty
+iconpicker.reset('bi-alarm') // Reset with a value
 ```
 
 **Use with font awesome**

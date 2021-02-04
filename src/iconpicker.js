@@ -16,17 +16,16 @@ export default class Iconpicker
             this.el.addEventListener('keyup', this.search)
         }
 
-        let valueFormat
         if (typeof options?.valueFormat === "function") { 
-            valueFormat = options.valueFormat
+            this.valueFormat = options.valueFormat
         }else{
-            valueFormat = val => `bi ${val}`
+            this.valueFormat = val => `bi ${val}`
         }
 
         this.el.insertAdjacentHTML('afterend', `
                 <div class="iconpicker-dropdown ${options?.containerClass ?? ''}">
                     <ul>
-                        ${icons.map(icon => `<li value="${valueFormat(icon)}" class="${defaultValue === icon ? selectedClass : ''}"><i class="${valueFormat(icon)}"></i></li>`).join('')}
+                        ${icons.map(icon => `<li value="${this.valueFormat(icon)}" class="${defaultValue === icon ? selectedClass : ''}"><i class="${this.valueFormat(icon)}"></i></li>`).join('')}
                     </ul>
                 </div>
             `)
@@ -44,13 +43,16 @@ export default class Iconpicker
             }
         }))
 
-        this.el.addEventListener('focusin', this.focusIn.bind(this))
-        this.el.addEventListener('change', this.setIconOnChange.bind(this))
+        this.el.addEventListener('focusin', this.focusIn)
+        this.el.addEventListener('change', this.setIconOnChange)
 
-        this.el.value = valueFormat(defaultValue)
+        this.el.value = this.valueFormat(defaultValue)
         this.el.dispatchEvent(new Event('change'))
     }
 
+    /**
+     * Use input as a search box
+     */
     search() {
         const items = this.nextElementSibling.getElementsByTagName('li')
         const pattern = new RegExp(this.value, 'i');
@@ -65,13 +67,19 @@ export default class Iconpicker
         }
     }
 
-    setIconOnChange() {
+    /**
+     * if showSelectedIn argument passed show icon in that element
+     */
+    setIconOnChange = () => {
         if (this.options?.showSelectedIn){
             this.options.showSelectedIn.innerHTML = `<i class="${this.el.value}"></i>`
         }
     }
 
-    focusIn() {
+    /**
+     * Focus event for given input element
+     */
+    focusIn = () => {
         if(this.el.nextElementSibling?.classList?.contains('iconpicker-dropdown')){
             this.el.nextElementSibling.querySelector('ul').style.top = this.el.offsetHeight + 'px'
             if(this.options?.fade ?? false){
@@ -80,10 +88,22 @@ export default class Iconpicker
             this.el.nextElementSibling.classList.add('show')
         }
     }
+
+    /**
+     * Reset the iconpicker instance
+     * @param {*} setValue 
+     */
+    reset = (setValue = '') => {
+        this.el.value = this.valueFormat(setValue)
+        this.setIconOnChange(this.valueFormat(setValue))
+    }
 }
 
 window.Iconpicker = Iconpicker
 
+/**
+ * Close iconpicker on click outside
+ */
 document.addEventListener('click', e => {
     document.querySelectorAll('.iconpicker-dropdown').forEach(dw => {
         const isClickInside = dw.contains(e.target) || dw.previousElementSibling.contains(e.target)

@@ -21,17 +21,20 @@
 
     <script src="../dist/iconpicker.js"></script>
     <script>
-        new Iconpicker(document.querySelector('.iconpicker'), {
-            //icons: ['fa-times', 'fa-check'],
-            showSelectedIn: document.querySelector('.selected-icon'), // default: none
-            searchable: true, // default: true
-            selectedClass: 'selected', // default: true
-            containerClass: 'my-picker', // default:
-            hideOnSelect: true,
-            fade: true, // default: false
-            defaultValue: 'bi-alarm',
-            valueFormat: val => `bi ${val}` // default: bi ${val}
-        })
+        const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
+            //icons: [], // default: all of the icons (icon set if you want to use only some of them)
+            showSelectedIn: document.querySelector(".selected-icon"), // default: none (element to show selected icon)
+            searchable: true, // default: true (use the input as a search box)
+            selectedClass: "selected", // default: selected (selected icon class)
+            containerClass: "my-picker", // default: (container class of iconpicker)
+            hideOnSelect: true, // default: true (hides the dropdown on select)
+            fade: true, // default: false (fade animation)
+            defaultValue: 'bi-alarm', // default: (default value)
+            valueFormat: val => `bi ${val}` // default: bi ${val} (format the value instead of prefix in previous versions)
+        });
+
+        iconpicker.reset() // Set as empty
+        iconpicker.reset('bi-alarm') // Reset with a value
     </script>
 </body>
 </html>
