@@ -2,10 +2,10 @@
 
 ### Usage
 
-**1** - Via **cdn** (latest)
+**1** - Via **cdn**
 
 ```js
-<script src="http://cdn.codethereal.com/iconpicker/dist/iconpicker.js"></script>
+<script src="https://unpkg.com/codethereal-iconpicker@1.1.3/dist/iconpicker.js"></script>
 ```
 
 **2** - Via **npm**
@@ -46,8 +46,9 @@ const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
     valueFormat: val => `bi ${val}` // default: bi ${val} (format the value instead of prefix in previous versions)
 });
 
-iconpicker.reset() // Set as empty
-iconpicker.reset('bi-alarm') // Reset with a value
+iconpicker.set() // Set as empty
+iconpicker.set('') // Set as empty
+iconpicker.set('bi-alarm') // Set a value
 ```
 
 **Use with font awesome**
@@ -56,5 +57,3 @@ new Iconpicker(document.querySelector(".iconpicker"), {
   icons: ['fa-times', 'fa-check'],
   valueFormat: val => `fa ${val}`
 ```
-
-![iconpicker](http://cdn.codethereal.com/iconpicker/demo.png)

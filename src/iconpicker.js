@@ -93,7 +93,7 @@ export default class Iconpicker
      * Reset the iconpicker instance
      * @param {*} setValue 
      */
-    reset = (setValue = '') => {
+    set = (setValue = '') => {
         this.el.value = this.valueFormat(setValue)
         this.setIconOnChange(this.valueFormat(setValue))
     }
