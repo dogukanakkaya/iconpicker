@@ -1,6 +1,6 @@
 {
   "name": "codethereal-iconpicker",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Iconpicker for Bootstrap 5 icons or use with whatever icon family you want",
   "main": "dist/iconpicker.js",
   "module": "src/iconpicker.js",
