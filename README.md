@@ -5,7 +5,7 @@
 **1** - Via **cdn**
 
 ```js
-<script src="https://unpkg.com/codethereal-iconpicker@1.1.3/dist/iconpicker.js"></script>
+<script src="https://unpkg.com/codethereal-iconpicker@1.1.5/dist/iconpicker.js"></script>
 ```
 
 **2** - Via **npm**
