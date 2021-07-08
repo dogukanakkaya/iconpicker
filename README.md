@@ -5,7 +5,7 @@
 **1** - Via **cdn**
 
 ```js
-<script src="https://unpkg.com/codethereal-iconpicker@1.1.5/dist/iconpicker.js"></script>
+<script src="https://unpkg.com/codethereal-iconpicker@1.2.0/dist/iconpicker.js"></script>
 ```
 
 **2** - Via **npm**
@@ -35,7 +35,7 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
 **Options**
 ```js
 (async () => {
-    const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.1.5/dist/iconsets/bootstrap5.json')
+    const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.0/dist/iconsets/bootstrap5.json')
     const result = await response.json()
 
 
