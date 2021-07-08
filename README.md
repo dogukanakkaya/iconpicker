@@ -65,4 +65,5 @@ iconpicker.set('bi-alarm') // Set a value
 new Iconpicker(document.querySelector(".iconpicker"), {
   icons: ['fa-times', 'fa-check'],
   valueFormat: val => `fa ${val}`
+})
 ```
