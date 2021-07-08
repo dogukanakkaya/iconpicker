@@ -35,7 +35,7 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
 **Options**
 ```js
 (async () => {
-    const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.0/dist/iconsets/bootstrap5.json')
+    const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.1/dist/iconsets/bootstrap5.json')
     const result = await response.json()
 
     const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
@@ -58,8 +58,7 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
 **Use with font awesome**
 ```js
 (async () => {
-  // There is no available file for fontawesome4
-  const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.0/dist/iconsets/fontawesome4.json')
+  const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.1/dist/iconsets/fontawesome4.json')
   const result = await response.json()
 
   new Iconpicker(document.querySelector(".iconpicker"), {
