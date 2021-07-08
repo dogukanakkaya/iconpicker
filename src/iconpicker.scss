@@ -6,7 +6,7 @@ $dropdown-box-shadow: 0 0 28px rgba(0, 0, 0, 0.1);
 $item-width: 40px;
 $item-height: 40px;
 $item-border: 1px solid #b2b2b273;
-$item-margin-bottom: 0.25rem;
+$item-margin: .1rem;
 
 $selected-background-color: #007eff;
 $selected-color: #fff;
@@ -42,7 +42,7 @@ $selected-color: #fff;
       text-align: center;
       border: $item-border;
       cursor: pointer;
-      margin-bottom: $item-margin-bottom;
+      margin: $item-margin;
 
       &.selected {
         background-color: $selected-background-color;

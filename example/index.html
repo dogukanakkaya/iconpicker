@@ -21,20 +21,27 @@
 
     <script src="../dist/iconpicker.js"></script>
     <script>
-        const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
-            //icons: [], // default: all of the icons (icon set if you want to use only some of them)
-            showSelectedIn: document.querySelector(".selected-icon"), // default: none (element to show selected icon)
-            searchable: true, // default: true (use the input as a search box)
-            selectedClass: "selected", // default: selected (selected icon class)
-            containerClass: "my-picker", // default: (container class of iconpicker)
-            hideOnSelect: true, // default: true (hides the dropdown on select)
-            fade: true, // default: false (fade animation)
-            defaultValue: 'bi-alarm', // default: (default value)
-            valueFormat: val => `bi ${val}` // default: bi ${val} (format the value instead of prefix in previous versions)
-        });
+        (async () => {
+            const response = await fetch('http://127.0.0.1:5500/dist/iconsets/bootstrap5.json')
+            const result = await response.json()
 
-        iconpicker.set() // Set as empty
-        iconpicker.set('bi-alarm') // Reset with a value
+
+            const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
+                icons: result,
+                showSelectedIn: document.querySelector(".selected-icon"),
+                searchable: true,
+                selectedClass: "selected",
+                containerClass: "my-picker",
+                hideOnSelect: true,
+                fade: true,
+                defaultValue: 'bi-alarm',
+                valueFormat: val => `bi ${val}`
+            });
+
+            iconpicker.set() // Set as empty
+            iconpicker.set('bi-alarm') // Reset with a value
+        })()
+        
     </script>
 </body>
 </html>
