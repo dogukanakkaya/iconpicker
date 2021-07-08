@@ -38,7 +38,6 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
     const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.0/dist/iconsets/bootstrap5.json')
     const result = await response.json()
 
-
     const iconpicker = new Iconpicker(document.querySelector(".iconpicker"), {
         icons: result,
         showSelectedIn: document.querySelector(".selected-icon"),
@@ -58,8 +57,14 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
 
 **Use with font awesome**
 ```js
-new Iconpicker(document.querySelector(".iconpicker"), {
-  icons: ['fa-times', 'fa-check'],
-  valueFormat: val => `fa ${val}`
-})
+(async () => {
+  // There is no available file for fontawesome4
+  const response = await fetch('https://unpkg.com/codethereal-iconpicker@1.2.0/dist/iconsets/fontawesome4.json')
+  const result = await response.json()
+
+  new Iconpicker(document.querySelector(".iconpicker"), {
+    icons: result,
+    valueFormat: val => `fa ${val}`
+  })
+})()
 ```
