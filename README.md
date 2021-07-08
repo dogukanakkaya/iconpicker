@@ -54,10 +54,6 @@ document.querySelectorAll('.iconpicker').forEach(picker => new Iconpicker(picker
     iconpicker.set() // Set as empty
     iconpicker.set('bi-alarm') // Reset with a value
 })()
-
-iconpicker.set() // Set as empty
-iconpicker.set('') // Set as empty
-iconpicker.set('bi-alarm') // Set a value
 ```
 
 **Use with font awesome**
